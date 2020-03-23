@@ -1,0 +1,137 @@
+// imports
+@import "./variables";
+
+// global classes
+.slideIn {
+  animation-name: slideIn;
+}
+
+#godown {
+  height: 60px;
+}
+
+body {
+  // background: url("../img/609173.jpg") no-repeat top;
+  height: 200vh;
+}
+
+// styles
+// navbar start
+.navbar-collapse {
+  overflow-y: auto;
+  max-height: 280px;
+
+  .dropdown {
+    position: static !important;
+
+    .dropdown-menu {
+      width: 100%;
+      background: rgba($color: $naciBlue, $alpha: 0.8);
+
+      .row {
+        padding: 0;
+        margin: auto;
+
+        .dropdown-item {
+          min-height: 60px;
+          line-height: 60px;
+          cursor: default;
+
+          &:hover {
+            background-color: transparent;
+          }
+
+          p {
+            margin: auto;
+            border: 1px solid $naciGreen;
+            text-align: center;
+            color: #fff;
+          }
+
+          p:hover {
+            text-decoration: none;
+            background-color: #fff;
+            cursor: pointer;
+            color: #000;
+          }
+        }
+      }
+    }
+  }
+}
+// navbar end
+
+// hero start
+#heroCarousel {
+  img {
+    height: 20rem;
+    object-fit: cover;
+  }
+}
+// hero end
+
+// intro start
+.intro {
+  text-align: center;
+  margin-top: 2rem;
+
+  a {
+    text-decoration: none;
+  }
+}
+// intro end
+
+// featured news start
+.ft-news {
+  margin-top: 2rem;
+
+  .news {
+    display: flex;
+    align-items: center;
+
+    .date {
+      display: inline-block;
+      width: 50%;
+      float: left;
+    }
+  }
+}
+// featured news end
+
+// key frames
+@keyframes slideIn {
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+// media queries
+@media (min-width: 992px) {
+  .animate {
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+  }
+
+  //   .row {
+  //     width: 100% !important;
+
+  //     .dropdown-item {
+  //       text-align: center;
+  //     }
+  //   }
+}
+
+// @media (max-width: 991px) {
+//   nav {
+//     text-align: center;
+
+//     .dropdown-item {
+//       text-align: center;
+//     }
+//   }
+// }
