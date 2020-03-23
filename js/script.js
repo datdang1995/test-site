@@ -29,5 +29,6 @@ $("#navMenu").resize(function() {
   $("#godown").height($("#navMenu").height() + 10);
 });
 
-if ($("#navMenu").height() > $("#godown").height())
+if ($("#navMenu").height() > $("#godown").height()) {
   $("#godown").height($("#navMenu").height() + 10);
+}

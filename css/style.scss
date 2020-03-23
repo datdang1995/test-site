@@ -7,52 +7,56 @@
 }
 
 #godown {
-  height: 60px;
-}
-
-body {
-  // background: url("../img/609173.jpg") no-repeat top;
-  height: 200vh;
+  height: 75px;
 }
 
 // styles
 // navbar start
-.navbar-collapse {
-  overflow-y: auto;
-  max-height: 280px;
+.navbar {
+  .navbar-brand img {
+    height: 3rem;
+    width: auto;
+  }
 
-  .dropdown {
-    position: static !important;
+  .navbar-collapse {
+    overflow-y: auto;
+    max-height: 280px;
 
-    .dropdown-menu {
-      width: 100%;
-      background: rgba($color: $naciBlue, $alpha: 0.8);
+    .dropdown {
+      position: static !important;
 
-      .row {
-        padding: 0;
-        margin: auto;
+      #sub-menu-1 {
+        width: 100%;
+        background: rgba($color: $naciBlue, $alpha: 0.8);
 
-        .dropdown-item {
-          min-height: 60px;
-          line-height: 60px;
-          cursor: default;
+        .row {
+          padding: 0;
+          margin: auto;
 
-          &:hover {
-            background-color: transparent;
-          }
+          .dropdown-item {
+            min-height: 60px;
+            line-height: 60px;
+            cursor: default;
+            padding: 0.5rem 0.25rem;
 
-          p {
-            margin: auto;
-            border: 1px solid $naciGreen;
-            text-align: center;
-            color: #fff;
-          }
+            &:hover {
+              background-color: transparent;
+            }
 
-          p:hover {
-            text-decoration: none;
-            background-color: #fff;
-            cursor: pointer;
-            color: #000;
+            p {
+              margin: auto;
+              border: 1px solid $naciGreen;
+              text-align: center;
+              color: #fff;
+              text-transform: capitalize;
+
+              &:hover {
+                text-decoration: none;
+                background-color: #fff;
+                cursor: pointer;
+                color: #000;
+              }
+            }
           }
         }
       }
@@ -64,7 +68,7 @@ body {
 // hero start
 #heroCarousel {
   img {
-    height: 20rem;
+    max-height: 20rem;
     object-fit: cover;
   }
 }
@@ -73,30 +77,114 @@ body {
 // intro start
 .intro {
   text-align: center;
-  margin-top: 2rem;
+  background-color: $naciGreen;
+  color: #fff;
+  padding: 1rem 1rem 2rem 1rem;
+
+  h1,
+  a {
+    color: $naciBlue;
+  }
 
   a {
     text-decoration: none;
+    &:hover {
+      color: #fff;
+    }
   }
 }
 // intro end
 
 // featured news start
 .ft-news {
-  margin-top: 2rem;
+  margin-top: 3rem;
+
+  .ft-news-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    text-transform: capitalize;
+  }
 
   .news {
+    text-decoration: none;
+    color: #000;
     display: flex;
     align-items: center;
 
     .date {
-      display: inline-block;
-      width: 50%;
       float: left;
+      background-color: $naciBlue;
+      color: #fff;
+      font-size: 12px;
+      text-align: center;
+      line-height: 25px;
+      margin-right: 1rem;
+      flex: 1;
     }
+
+    .title {
+      flex: 5;
+    }
+
+    &:hover {
+      .date,
+      .title {
+        color: $naciGreen;
+      }
+    }
+  }
+  .ft-news-more {
+    display: block;
+    text-align: center;
+    text-decoration: none;
   }
 }
 // featured news end
+
+// footer start
+footer {
+  min-height: 15rem;
+  background-color: rgba($color: $naciBlue, $alpha: 0.9);
+  color: #fff;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  .container,
+  .row {
+    height: 100%;
+    align-items: center;
+  }
+
+  table,
+  thead,
+  tr,
+  th,
+  td {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+  }
+
+  table {
+    th {
+      text-transform: uppercase;
+    }
+
+    td {
+      width: 50%;
+    }
+  }
+
+  a {
+    color: $naciGreen;
+
+    &:hover {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
+// footer end
 
 // key frames
 @keyframes slideIn {
@@ -116,22 +204,12 @@ body {
     animation-duration: 0.5s;
     animation-fill-mode: both;
   }
-
-  //   .row {
-  //     width: 100% !important;
-
-  //     .dropdown-item {
-  //       text-align: center;
-  //     }
-  //   }
 }
 
-// @media (max-width: 991px) {
-//   nav {
-//     text-align: center;
-
-//     .dropdown-item {
-//       text-align: center;
-//     }
-//   }
-// }
+@media (max-width: 991px) {
+  footer .col-lg-4 {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+}
