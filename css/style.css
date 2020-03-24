@@ -1,0 +1,231 @@
+.slideIn {
+  -webkit-animation-name: slideIn;
+          animation-name: slideIn;
+}
+
+#godown {
+  height: 75px;
+}
+
+.navbar .navbar-brand img {
+  height: 3rem;
+  width: auto;
+}
+
+.navbar .navbar-collapse {
+  overflow-y: auto;
+  max-height: 280px;
+}
+
+.navbar .navbar-collapse .dropdown {
+  position: static !important;
+}
+
+.navbar .navbar-collapse .dropdown #sub-menu-1 {
+  width: 100%;
+  background: rgba(31, 68, 157, 0.8);
+}
+
+.navbar .navbar-collapse .dropdown #sub-menu-1 .row {
+  padding: 0;
+  margin: auto;
+}
+
+.navbar .navbar-collapse .dropdown #sub-menu-1 .row .dropdown-item {
+  min-height: 60px;
+  line-height: 60px;
+  cursor: default;
+  padding: 0.5rem 0.25rem;
+}
+
+.navbar .navbar-collapse .dropdown #sub-menu-1 .row .dropdown-item:hover {
+  background-color: transparent;
+}
+
+.navbar .navbar-collapse .dropdown #sub-menu-1 .row .dropdown-item p {
+  margin: auto;
+  border: 1px solid #8cc22c;
+  text-align: center;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.navbar .navbar-collapse .dropdown #sub-menu-1 .row .dropdown-item p:hover {
+  text-decoration: none;
+  background-color: #fff;
+  cursor: pointer;
+  color: #000;
+}
+
+#heroCarousel img {
+  max-height: 20rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.intro {
+  text-align: center;
+  background-color: #8cc22c;
+  color: #fff;
+  padding: 1rem 1rem 2rem 1rem;
+}
+
+.intro h1,
+.intro a {
+  color: #1f449d;
+}
+
+.intro a {
+  text-decoration: none;
+}
+
+.intro a:hover {
+  color: #fff;
+}
+
+.ft-news {
+  margin-top: 3rem;
+}
+
+.ft-news .ft-news-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  text-transform: capitalize;
+}
+
+.ft-news .news {
+  text-decoration: none;
+  color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ft-news .news .date {
+  float: left;
+  background-color: #1f449d;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  line-height: 25px;
+  margin-right: 1rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.ft-news .news .title {
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+}
+
+.ft-news .news:hover .date,
+.ft-news .news:hover .title {
+  color: #8cc22c;
+}
+
+.ft-news .ft-news-more {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+footer {
+  min-height: 15rem;
+  background-color: rgba(31, 68, 157, 0.9);
+  color: #fff;
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .container,
+footer .row {
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer table,
+footer thead,
+footer tr,
+footer th,
+footer td {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+footer table th {
+  text-transform: uppercase;
+}
+
+footer table td {
+  width: 50%;
+}
+
+footer a {
+  color: #8cc22c;
+}
+
+footer a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+@-webkit-keyframes slideIn {
+  0% {
+    -webkit-transform: translateY(1rem);
+            transform: translateY(1rem);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    -webkit-transform: translateY(1rem);
+            transform: translateY(1rem);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (min-width: 992px) {
+  .animate {
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+  }
+}
+
+@media (max-width: 991px) {
+  footer .col-lg-4 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 2rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
